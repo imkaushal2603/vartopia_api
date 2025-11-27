@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "express": "^5.1.0",
+    "express-xml-bodyparser": "^0.4.1"
+  }
+}
