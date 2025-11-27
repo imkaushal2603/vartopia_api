@@ -8,10 +8,11 @@ app.use(express.json());
 app.use(bodyParser.text({ type: "application/xml" }));
 
 app.post("/companies", async (req, res) => {
-    console.log("Received body:", req.body);
+    console.log("🚀 Received XML Body:\n", req.body);
 
     res.setHeader("Content-Type", "application/xml");
-    return res.send(req.body);
+    return res.send(req.body);  
 });
 
-app.listen(3000, () => console.log("Running on https://vartopia-api.onrender.com/"));
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log("Server running on PORT", PORT));
